@@ -307,4 +307,31 @@ Las cuales se representan el funcionamiento del siguiente circuito:
 
 \end{figure}
 
+
+\subsection{Conversión de tensiones}
+
+Una condición para el diseño de los circuitos es que estos reciban
+y devuelvan tensiones de 0 o 5V mientras que la lógica interna de
+esta debe operar a 3.3V, por lo que se deberá implementar tecnología
+que trabaje con este nivel de tensión realizando la respectiva conversión
+de voltaje tanto a la entrada como a la salida.
+
+Para esto último se utilizará el circuito integrado SN7407N el cual
+permite realizar cómodamente una conmutación de tensión dado que se
+le permite al usuario operar con el colector del transistor ubicado
+a la salida de este, es decir, este es un dispositivo \emph{open-colector}.
+Un diagrama simplificado de su funcionamiento se muestra a continuación:
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=10cm,height=10cm,keepaspectratio]{imagenes/SN7407N}
+\par\end{centering}
+\caption{Diagrama del SN7407N}
+
+\end{figure}
+
+Como se puede ver un 1 lógico a la entrada dejara en alta impedancia
+la salida del integrado, dado que le transistor estará en estado de
+corte, con lo cual implementado una resistencia de pull-up sobre el
+colector a la salida se tendrá la tensión deseada.
 \end{document}
