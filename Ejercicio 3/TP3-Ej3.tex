@@ -26,10 +26,10 @@
 
 \subsection{Consigna}
 
-En este ejercicio se implementará una maquina de estados de Moore
-siguiendo lo solicitado por el trabajo y luego se hará una maquina
-de estados equivalente en su versión Mealy. Esta maquina de estados
-es la que se muestra a continuación:
+En este ejercicio se implementarï¿½ una maquina de estados de Moore
+siguiendo lo solicitado por el trabajo y luego se harï¿½ una maquina
+de estados equivalente en su versiï¿½n Mealy. Esta maquina de estados
+es la que se muestra a continuaciï¿½n:
 
 \begin{figure}[H]
 \begin{centering}
@@ -44,12 +44,12 @@ es la que se muestra a continuación:
 
 Como se sabe las maquinas de estado de Moore se caracterizan por tener
 una salida unicamente dependiente del estado actual del sistema, sin
-depender de forma instantánea de la entrada.
+depender de forma instantï¿½nea de la entrada.
 
-Como\ primera instancia para resolución de esta maquina se define
+Como\ primera instancia para resoluciï¿½n de esta maquina se define
 que valores para los bits denominados como \emph{X} e \emph{Y }caracterizan
 a cada uno de los estados, se puede observar ademas cuando ambos de
-estos bits valen 1 la maquina no se encuentra en ningún estado relevante
+estos bits valen 1 la maquina no se encuentra en ningï¿½n estado relevante
 por lo que este se tratara como un estado de \emph{don\textasciiacute t
 care}. En la siguiente tabla se resume todo esto:
 
@@ -76,8 +76,8 @@ C & 1 & 0\tabularnewline
 \end{figure}
 
 Una vez definido que valores identifican a cada uno de los estados
-lo que sigue es recopilar la información sobre como evoluciona el
-sistema según las entradas a este y como también cada estado determina
+lo que sigue es recopilar la informaciï¿½n sobre como evoluciona el
+sistema segï¿½n las entradas a este y como tambiï¿½n cada estado determina
 la salida obtenida del sistema, todo esto se observa en la siguiente
 tabla:
 
@@ -105,10 +105,10 @@ tabla:
 
 \end{figure}
 
-Nótese que se utilizaran letras minúsculas para designar estados actuales
-y letras mayúsculas para estados futuros.
+Nï¿½tese que se utilizaran letras minï¿½sculas para designar estados actuales
+y letras mayï¿½sculas para estados futuros.
 
-Tanto la información sobre los estados futuros como de la salida se
+Tanto la informaciï¿½n sobre los estados futuros como de la salida se
 pueden contener en una tabla de verdad teniendo como variables los
 estados actuales \emph{x} e \emph{y} y el valor de entrada:
 
@@ -155,15 +155,15 @@ x & y & Output\tabularnewline
 
 \end{figure}
 
-Como se puede observar queda implícito en la tabla anterior que esta
-será una maquina de estado de Moore ya que, como se puede observar,
+Como se puede observar queda implï¿½cito en la tabla anterior que esta
+serï¿½ una maquina de estado de Moore ya que, como se puede observar,
 la salida esta unicamente determinada por el estado actual.
 
-Teniendo ya estas tablas de verdad se procede utilizar el método de
-resolución con min-terminos del mapa de Karnaugh para obtener las
-expresiones lógicas de \emph{X} e \emph{Y} y de la salida, para se
+Teniendo ya estas tablas de verdad se procede utilizar el mï¿½todo de
+resoluciï¿½n con min-terminos del mapa de Karnaugh para obtener las
+expresiones lï¿½gicas de \emph{X} e \emph{Y} y de la salida, para se
 utilizan los estados de \emph{don\textasciiacute t care} para lograr
-una expresión lo mas compacta posible:
+una expresiï¿½n lo mas compacta posible:
 
 \begin{figure}[H]
 \caption{Mapa de Karnaugh de X}
@@ -202,18 +202,18 @@ Las cuales describen el comportamiento del siguiente circuito:
 
 Mientras que la maquina de estados de Moore depende exclusivamente
 del estado actual del sistema la de Mealy no solo depende de este
-sino también del a la entrada del sistema, de allí una de las principales
+sino tambiï¿½n del a la entrada del sistema, de allï¿½ una de las principales
 diferencias con respecto a las maquinas de estado de Moore, un cambio
-a la entrada se vera reflejado \emph{instantáneamente} a la salida.
+a la entrada se vera reflejado \emph{instantï¿½neamente} a la salida.
 
-Para llegar a que la salida este en relación directa con la entrada
+Para llegar a que la salida este en relaciï¿½n directa con la entrada
 se analizo paso a paso el comportamiento del sistema. Se entiende
-que la maquina verá un 1 a su salida cuando se tenga un 1 a la entrada
-y simultáneamente se este en estado latente o inicial, una vez muestreado
+que la maquina verï¿½ un 1 a su salida cuando se tenga un 1 a la entrada
+y simultï¿½neamente se este en estado latente o inicial, una vez muestreado
 este valor se pasara a un nuevo estado en el cual el sistema arrojara
-0 ante cualquier salida. En este estado se permanecerá mientras se
-siga leyendo un 1 a la entrada y se regresará al estado inicial en
-caso contrario. A continuación un ejemplo:
+0 ante cualquier salida. En este estado se permanecerï¿½ mientras se
+siga leyendo un 1 a la entrada y se regresarï¿½ al estado inicial en
+caso contrario. A continuaciï¿½n un ejemplo:
 
 \begin{figure}[H]
 \begin{centering}
@@ -268,7 +268,7 @@ Como se ha planteado hasta ahora solo existen 2 estados posibles por
 lo tanto si se considera la variable \emph{estados} (la cual se llamara
 \emph{x} para los presentes y \emph{X} para los futuros) se puede
 decir que esta nueva variable posee un valor binario, 0 para el estado
-A y 1 para el estado B. Desde aquí se puede implementar la siguiente
+A y 1 para el estado B. Desde aquï¿½ se puede implementar la siguiente
 tabla de verdad:
 
 \begin{figure}[H]
@@ -292,7 +292,7 @@ x & input & X & Output\tabularnewline
 
 \end{figure}
 
-Desde aquí es fácil observar las siguientes implicaciones lógicas:
+Desde aquï¿½ es fï¿½cil observar las siguientes implicaciones lï¿½gicas:
 \begin{itemize}
 \item $X=inp$
 \item $Output=inp\cdot\overline{x}$
@@ -308,19 +308,19 @@ Las cuales se representan el funcionamiento del siguiente circuito:
 \end{figure}
 
 
-\subsection{Conversión de tensiones}
+\subsection{Conversiï¿½n de tensiones}
 
-Una condición para el diseño de los circuitos es que estos reciban
-y devuelvan tensiones de 0 o 5V mientras que la lógica interna de
-esta debe operar a 3.3V, por lo que se deberá implementar tecnología
-que trabaje con este nivel de tensión realizando la respectiva conversión
+Una condiciï¿½n para el diseï¿½o de los circuitos es que estos reciban
+y devuelvan tensiones de 0 o 5V mientras que la lï¿½gica interna de
+esta debe operar a 3.3V, por lo que se deberï¿½ implementar tecnologï¿½a
+que trabaje con este nivel de tensiï¿½n realizando la respectiva conversiï¿½n
 de voltaje tanto a la entrada como a la salida.
 
-Para esto último se utilizará el circuito integrado SN7407N el cual
-permite realizar cómodamente una conmutación de tensión dado que se
+Para esto ï¿½ltimo se utilizarï¿½ el circuito integrado SN7407N el cual
+permite realizar cï¿½modamente una conmutaciï¿½n de tensiï¿½n dado que se
 le permite al usuario operar con el colector del transistor ubicado
 a la salida de este, es decir, este es un dispositivo \emph{open-colector}.
-Un diagrama simplificado de su funcionamiento se muestra a continuación:
+Un diagrama simplificado de su funcionamiento se muestra a continuaciï¿½n:
 
 \begin{figure}[H]
 \begin{centering}
@@ -330,8 +330,8 @@ Un diagrama simplificado de su funcionamiento se muestra a continuación:
 
 \end{figure}
 
-Como se puede ver un 1 lógico a la entrada dejara en alta impedancia
-la salida del integrado, dado que le transistor estará en estado de
+Como se puede ver un 1 lï¿½gico a la entrada dejara en alta impedancia
+la salida del integrado, dado que le transistor estarï¿½ en estado de
 corte, con lo cual implementado una resistencia de pull-up sobre el
-colector a la salida se tendrá la tensión deseada.
+colector a la salida se tendrï¿½ la tensiï¿½n deseada.
 \end{document}
