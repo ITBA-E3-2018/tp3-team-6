@@ -12,17 +12,16 @@ Teni\'endo en cuenta las especificaciones de la m\'aquina de estados, se procede
 \subsection*{Diagrama de Estados}
 El diagrama de estados para la m\'aquina de estados de Moore queda de la siguiente forma:
 \begin{center}
-\includegraphics[scale=0.6]{moore1.png}
+\includegraphics[scale=0.6]{../Ejercicio-1/moore1.png}
 \end{center}
 y la m\'aquina de estados de Mealy queda de la siguiente forma:
 \begin{center}
-\includegraphics{mealy1.png}
+\includegraphics{../Ejercicio-1/mealy1.png}
 \end{center}
 Se puede ver que la mm\'aquina de estados de Mealy tiene menos estados que la de Moore ya que la salida depende de la entrada adem\'as del estado.
 
 \subsection*{Tabla de Estados}
-A partir de los diagramas de estados, se procede a armar las tablas de estados de cada m\'aquina. Asignando a los estados como: A = 00, B = 01, C = 10 y D = 11, la tabla de estados de Moore queda de la siguiente forma:
-\\
+A partir de los diagramas de estados, se procede a armar las tablas de estados de cada m\'aquina. Asignando a los estados como: A = 00, B = 01, C = 10 y D = 11, la tabla de estados de Moore queda de la siguiente forma:\\
 \begin{center}
 	\begin{table}[h!]
 		\begin{center}
@@ -163,18 +162,18 @@ Y con estas ecuaciones ya es posible diseñar el circuito de Mealy.
 Como ya se tiene lo necesario para diseñar y simular los circuitos, se los diseña quedando de la siguiente forma:
 Circuito utilizando la m\'aquina de estados de Moore:
 \begin{center}
-\includegraphics[scale=0.75]{moore3.png}
+\includegraphics[scale=0.75]{../Ejercicio-1/moore3.png}
 \end{center}
 Al simular el circuito en GTKWave se obtiene lo siguiente:
 \begin{center}
-\includegraphics[scale=0.5]{moore2.png}
+\includegraphics[scale=0.5]{../Ejercicio-1/moore2.png}
 \end{center}
 Circuito utilizando la m\'aquina de estados de Mealy:
 \begin{center}
-\includegraphics[scale=0.6]{mealy3.png}
+\includegraphics[scale=0.6]{../Ejercicio-1/mealy3.png}
 \end{center}
 Al simular el circuito en GTKWave se obtiene lo siguiente:
 \begin{center}
-\includegraphics[scale=0.5]{mealy2.png}
+\includegraphics[scale=0.5]{../Ejercicio-1/mealy2.png}
 \end{center}
 La gran diferencia que se puede observar en la simulación es que la salidas est\'an desplasadas entre s\'i exactamente un ciclo de clock. Eso se debe a que el circuito el cual fue implimentado con Mealy responde m\'as r\'apido ya que su salida depende tanto de la entrada como del estado. En cambio el circuito el cual fue implementado con Moore solo depende del estado.
