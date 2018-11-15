@@ -189,3 +189,52 @@
 {
 \end{tikzpicture}
 }
+%Empieza el ejercicio 1
+%Empty Karnaugh map 4x4
+\newenvironment{Karnaug}%
+{
+\begin{tikzpicture}[baseline=(current bounding box.north),scale=0.8]
+\draw (0,0) grid (4,4);
+\draw (0,4) -- node [pos=0.7,above right,anchor=south west] {$y_2$$y_1$} node [pos=0.7,below left,anchor=north east] {SI} ++(135:1);
+%
+\matrix (mapa) [matrix of nodes,
+        column sep={0.8cm,between origins},
+        row sep={0.8cm,between origins},
+        every node/.style={minimum size=0.3mm},
+        anchor=8.center,
+        ampersand replacement=\&] at (0.5,0.5)
+{
+                       \& |(c00)| 00         \& |(c01)| 01         \& |(c11)| 11         \& |(c10)| 10         \& |(cf)| \phantom{00} \\
+|(r00)| 00             \& |(0)|  \phantom{0} \& |(1)|  \phantom{0} \& |(3)|  \phantom{0} \& |(2)|  \phantom{0} \&                     \\
+|(r01)| 01             \& |(4)|  \phantom{0} \& |(5)|  \phantom{0} \& |(7)|  \phantom{0} \& |(6)|  \phantom{0} \&                     \\
+|(r11)| 11             \& |(12)| \phantom{0} \& |(13)| \phantom{0} \& |(15)| \phantom{0} \& |(14)| \phantom{0} \&                     \\
+|(r10)| 10             \& |(8)|  \phantom{0} \& |(9)|  \phantom{0} \& |(11)| \phantom{0} \& |(10)| \phantom{0} \&                     \\
+|(rf) | \phantom{00}   \&                    \&                    \&                    \&                    \&                     \\
+};
+}%
+{
+\end{tikzpicture}
+}
+%Empty Karnaugh map 2x4
+\newenvironment{Karnaughvuito}%
+{
+\begin{tikzpicture}[baseline=(current bounding box.north),scale=0.8]
+\draw (0,0) grid (4,2);
+\draw (0,2) -- node [pos=0.7,above right,anchor=south west] {SI} node [pos=0.7,below left,anchor=north east] {y} ++(135:1);
+%
+\matrix (mapa) [matrix of nodes,
+        column sep={0.8cm,between origins},
+        row sep={0.8cm,between origins},
+        every node/.style={minimum size=0.3mm},
+        anchor=4.center,
+        ampersand replacement=\&] at (0.5,0.5)
+{
+                       \& |(c00)| 00         \& |(c01)| 01         \& |(c11)| 11         \& |(c10)| 10         \& |(cf)| \phantom{00} \\
+|(r00)| 0             \& |(0)|  \phantom{0} \& |(1)|  \phantom{0} \& |(3)|  \phantom{0} \& |(2)|  \phantom{0} \&                     \\
+|(r01)| 1             \& |(4)|  \phantom{0} \& |(5)|  \phantom{0} \& |(7)|  \phantom{0} \& |(6)|  \phantom{0} \&                     \\
+|(rf) | \phantom{00}   \&                    \&                    \&                    \&                    \&                     \\
+};
+}%
+{
+\end{tikzpicture}
+}
